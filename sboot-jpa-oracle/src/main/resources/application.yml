@@ -1,0 +1,21 @@
+server:
+  port: 8087
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:49161:xe
+    username: system
+    password: oracle
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.Oracle12cDialect
+    show-sql: true
+minPoolSize: 5
+maxPoolSize: 50
+idleConnectionTestPeriod: 5
+maxIdleTime: 5
+maxStatements: 1000
+maxStatementsPerConnection: 100
+maxIdleTimeExcessConnections: 10000

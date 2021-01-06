@@ -12,6 +12,7 @@
         <module>spring-cloud</module>
         <module>spring-data</module>
         <module>springboot-jdbi</module>
+        <module>sboot-jpa-oracle</module>
     </modules>
 
     <properties>
