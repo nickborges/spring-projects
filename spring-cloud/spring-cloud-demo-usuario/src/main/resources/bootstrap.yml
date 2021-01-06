@@ -1,0 +1,9 @@
+#arquivo de configuração que é lido antes da aplicação subir, neste caso vai buscar as configurações de banco de dados no config server
+spring:
+  application:
+    name: "usuario"
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888 #endereço do config server

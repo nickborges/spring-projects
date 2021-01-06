@@ -1,0 +1,10 @@
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 1', 'Descrição 1', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 2', 'Descrição 2', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 3', 'Descrição 3', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 4', 'Descrição 4', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 5', 'Descrição 5', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 6', 'Descrição 6', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 7', 'Descrição 7', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 8', 'Descrição 8', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 9', 'Descrição 9', 1, 'S');
+INSERT INTO PEDIDO(nome, descricao, tamanho, ativo) VALUES('Produto 9', 'Descrição 9', 1, 'S');

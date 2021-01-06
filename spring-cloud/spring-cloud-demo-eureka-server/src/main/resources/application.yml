@@ -1,0 +1,8 @@
+server:
+  port: 8761
+  
+#informa que para o eureka que ele não precisa se registrar no server do eureka, pois ele é o próprio server
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false

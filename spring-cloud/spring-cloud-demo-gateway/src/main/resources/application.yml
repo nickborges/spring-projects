@@ -1,0 +1,21 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: "ApiGateway"
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#rota para lista os endpoints registrados no eureka (http://localhost:5555/actuator/routes)
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "routes"
