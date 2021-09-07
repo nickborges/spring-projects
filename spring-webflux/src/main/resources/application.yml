@@ -1,0 +1,4 @@
+mongo:
+  port: 27017
+  database: webfluxdb
+  uri: mongodb://localhost:27017/webfluxdb
