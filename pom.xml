@@ -14,6 +14,7 @@
         <module>springboot-jdbi</module>
         <module>sboot-jpa-oracle</module>
         <module>spring-webflux</module>
+        <module>sboot-hexagonal-architecture</module>
     </modules>
 
     <properties>

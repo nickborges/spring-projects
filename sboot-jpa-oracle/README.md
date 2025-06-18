@@ -1,13 +1,41 @@
 ### 1. Subindo container Docker do Oracle
 ````
 docker pull epiclabs/docker-oracle-xe-11g				
-docker run -dit --restart unless-stopped -p 49161:1521 -e ORACLE_ALLOW_REMOTE=true epiclabs/docker-oracle-xe-11g -v dbvolume:/u01/app/oracle/oradata oracle/database:11.2.0.2-xe				
+docker run -dit --platform linux/amd64 \
+--name oracle-11 --restart unless-stopped -p 49161:1521 \
+-e ORACLE_ALLOW_REMOTE=true epiclabs/docker-oracle-xe-11g \
+-e ORACLE_PASSWORD=oracle \
+-v dbvolume:/u01/app/oracle/oradata oracle/database:11.2.0.2-xe
+
+docker run -dit --platform linux/amd64 --name oracle-11 --restart unless-stopped -p 49161:1521 wnameless/oracle-xe-11g-r2 \
+-e ORACLE_ALLOW_REMOTE=true wnameless/oracle-xe-11g-r2 \
+-e ORACLE_PWD=oracle \
+-v dbvolume:/u01/app/oracle/oradata oracle/database:11.2.0.2-xe
+
 "hostname: localhost
 port: 49161
 sid: xe
 username: system
 password: oracle"				
 ````
+
+### 1.1. Mudar o tempo de expiração da senha default
+* entrar no container
+* conectar:
+  * sqlplus /nolog
+  * conn system/oracle
+* informar a nova senha
+* alterar:
+```
+ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+alter user system identified by system account unlock;
+commit;
+```
+* docker restart my_container
+* caso o usuário esteja bloqueado
+  * conn sys as sysdba
+  * ALTER USER system ACCOUNT UNLOCK;
+  * ALTER USER SYSTEM IDENTIFIED BY oracle;
 
 ### 2. configurando dependência do Oracle
 ````

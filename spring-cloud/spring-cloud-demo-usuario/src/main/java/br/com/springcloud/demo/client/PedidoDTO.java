@@ -13,6 +13,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
 public class PedidoDTO implements Serializable{
 	
 	private static final long serialVersionUID = -2351954342527631280L;
